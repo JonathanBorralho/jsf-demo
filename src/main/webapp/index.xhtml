@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<f:loadBundle basename="resources.application" var="msg" />
+	
+	<h:head>
+		<title><h:outputText value="#{msg.welcomeTitle}" /></title>
+	</h:head>
+	
+	<h:body>
+		<h:form>
+			
+			<h:panelGroup>
+				<h:outputLabel value="Nome" />
+				<h:inputText value="#{indexBean.nome}"  />
+				
+				<br/>
+				
+				<h:outputLabel value="Data de Nascimento" />
+				<h:inputText value="#{indexBean.dataNascimento}"  />
+			</h:panelGroup>
+			
+			<br/>
+			
+			<p:commandButton value="Cadastrar" action="#{indexBean.enviar}" />
+		</h:form>
+	</h:body>
+</html>
